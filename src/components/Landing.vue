@@ -1,7 +1,7 @@
 <template lang="html">
   <content>
     <div class="hero">
-      <carousel :perPage='1'>
+      <carousel :perPage="1" :autoplay="true" :navigationEnabled="true">
         <template v-for="item of test">
           <slide>
             <div class="img-box" :style="{background: 'url('+item.bg+')', backgroundSize: 'cover', backgroundPosition: 'center'}" >
@@ -22,8 +22,6 @@
       </div>
     </section>
 
-
-
   </content>
 </template>
 
@@ -42,7 +40,7 @@ export default {
         {caption: 'I Am A Cat Person', bg: 'https://images.pexels.com/photos/172/animal-pet-close-up-view-hairs.jpg'},
         {caption: 'I Am A Self Learner', bg: 'https://images.pexels.com/photos/85583/books-85583.jpeg'},
         {caption: 'I Love Coding', bg: 'https://images.pexels.com/photos/270557/pexels-photo-270557.jpeg'},
-        {caption: 'This Site Is Powered By Vue.js', bg: 'https://cdn.auth0.com/blog/vuejs/vue-logo.png'},
+        // {caption: 'This Site Is Powered By Vue.js', bg: 'https://cdn.auth0.com/blog/vuejs/vue-logo.png'},
       ]
     }
   },
@@ -54,22 +52,15 @@ export default {
   //   transition-duration: 2s
   .hero
     text-align: center
+    height: 100vh
+    // width: 100vw
     .img-box
-      height: 451px
-      width: 100vw
+      height: calc(100vh - 120px)
       position: relative
-      @media screen and (min-width: 370px)
-        height: 551px
-      @media screen and (min-width: 410px)
-        height: 621px
-      @media screen and (min-width: 760px)
-        height: 911px
-      @media screen and (min-width: 1020px)
-        height: 1251px
       .caption
-        padding: 20px
+        padding: 50px
         background: rgba(0,0,0,0.3)
-        position: absolute
+        position: relative
         top: 50%
         left: 50%
 
