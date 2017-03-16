@@ -1,0 +1,119 @@
+<template lang="html">
+  <section class="my-skills clearfix">
+    <div class="container">
+      <div class="item">
+        <div class="item-title bg-color-green">
+          <i class="fa fa-html5" aria-hidden="true"></i>
+          <i class="fa fa-css3" aria-hidden="true"></i>
+          <img src="../../assets/title-bg-skill-1.png" alt="">
+          <h3>Web Design</h3>
+        </div>
+        <div class="item-desc">
+          <p>Creating Responsive, modern, beautiful and content rich, SEO optimized website.<br><br>
+          The trending single page webpage design makes evertying interesting.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-title bg-color-purple">
+          <!-- <i class="fa fa-desktop" aria-hidden="true"></i>
+          <i class="fa fa-laptop" aria-hidden="true"></i>
+          <i class="fa fa-tablet" aria-hidden="true"></i>
+          <i class="fa fa-mobile" aria-hidden="true"></i> -->
+          <i class="fa fa-code" aria-hidden="true"></i>
+          <img src="../../assets/title-bg-skill-2.png" alt="">
+          <h3>Web Apps</h3>
+        </div>
+        <div class="item-desc">
+          <p>Reactive web application using the most advanced technologies.<br><br>I use Javascript, MongoDB, Vuejs and
+            many other modern frameworks to build apps that run everywhere.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</template>
+
+<script>
+
+export default {
+  name: 'skills',
+
+}
+</script>
+
+<style lang="sass" scoped>
+  .left
+    float: left
+
+  .bg-color-green
+    background: rgba(0,214,90,0.6)
+  .bg-color-purple
+    background: rgba(197,112,219, 0.6)
+  .bg-color-orange
+    background: rgba(252,74,26, 0.6)
+
+  .my-skills
+    margin-bottom: 80px
+    .container
+      max-width: 1024px
+      margin: 0 auto
+      .item
+        box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5)
+        border-radius: 4px
+        width: 240px
+        margin: 0 auto
+        margin-bottom: 40px
+        p
+          margin: 10px 0
+          line-height: 20px
+          &:first-letter
+            font-weight: bold
+            font-size: 150%
+        .item-desc
+          padding: 10px 20px 20px 20px
+          strong
+            font-size: 16px
+            margin: 10px 0
+        .item-title
+          position: relative
+          border-radius: 4px 4px 0 0
+          padding: 10px
+          overflow: hidden
+          img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 1
+            z-index: -1
+          i
+            color: #fff
+            font-size: 120%
+            margin-bottom: 12px
+            // z-index: 2
+          h3
+            color: #fff
+            font-size: 34px
+            margin-bottom: 10px
+            font-weight: bold
+          /*&:after
+            content: ' '
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            z-index: -1
+            background: url('../../assets/title-bg-skill-2.png') no-repeat
+            background-size: cover
+            background-position: center*/
+
+        @media screen and (min-width: 1024px)
+          // width: 33%
+          float: left
+          margin: 40px
+
+</style>

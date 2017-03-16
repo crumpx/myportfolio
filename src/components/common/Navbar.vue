@@ -66,6 +66,8 @@ export default {
       .brand
         float: left
         margin-left: 20px
+        @media screen and (min-width: 790px)
+          margin-left: 40px
         strong
           font-size: 30px
           line-height: 60px
@@ -77,16 +79,16 @@ export default {
         @media screen and (min-width: 790px)
           display: none
       .nav-menu
-        /*z-index: 1*/
         width: 100%
         float: right
         position: absolute
         top: 61px
+
         background: rgba(255,255,255, 0.8)
         border-bottom: 1px solid black
         @media screen and (min-width: 790px)
           position: static
-          margin-right: 20px
+          margin-right: 40px
           display: block
           width: initial
           border: 0

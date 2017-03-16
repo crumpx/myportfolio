@@ -7,12 +7,12 @@
 
 <script>
 import Navbar from './components/common/Navbar'
-import Landing from './components/Landing'
+// import Landing from './components/Landing'
 export default {
   name: 'app',
   components: {
     Navbar,
-    Landing
+    // Landing
   }
 }
 </script>
@@ -51,6 +51,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
 }
 ol, ul {
 	list-style: none;
