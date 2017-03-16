@@ -3,6 +3,9 @@
     <div class="container">
       <div class="inner">
         <img src="https://avatars.githubusercontent.com/u/4764314?v=3" alt="Gang Zhao's Picture">
+        <h1>Hi, My name is Gang</h1>
+        <h4>I am a web developer.</h4>
+        <p>I currently live in NYC.</p>
       </div>
     </div>
 
@@ -38,7 +41,7 @@ export default {
         background-position: center
         background-size: cover
       .inner
-        padding: 20px
+        padding: 40px
         width: 80%
         margin: 0 auto
         text-align: center
