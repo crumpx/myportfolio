@@ -7,12 +7,10 @@
 
 <script>
 import Navbar from './components/common/Navbar'
-// import Landing from './components/Landing'
 export default {
   name: 'app',
   components: {
     Navbar,
-    // Landing
   }
 }
 </script>

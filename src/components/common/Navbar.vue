@@ -10,10 +10,10 @@
       <div v-bind:class="[ isOpen ? 'open' : 'close', 'nav-menu']">
         <ul>
           <!-- <li v-on:click="openMenu()"><router-link to="" title='Home'>Home</router-link></li> -->
-          <li v-on:click="openMenu()"><router-link to="" title='About Me'>About</router-link></li>
-          <li v-on:click="openMenu()"><router-link to="" title='My Portfolio'>Portfolio</router-link></li>
-          <li v-on:click="openMenu()"><router-link to="" title='Services I offer'>Service</router-link></li>
-          <li v-on:click="openMenu()"><router-link to="" title='My Blog'>Blog</router-link></li>
+          <li v-on:click="openMenu()"> <a href="javascript:;"  v-scroll-to="'#aboutme'" title='About Me'>About</a></li>
+          <li v-on:click="openMenu()"> <a href="javascript:;"  title='My Portfolio'>Portfolio</a></li>
+          <li v-on:click="openMenu()"> <a href="javascript:;" title='Services I offer'>Service</a></li>
+          <li v-on:click="openMenu()"> <a href="javascript:;" title='My Blog'>Blog</a></li>
         </ul>
       </div>
       </div>
@@ -23,9 +23,9 @@
 </template>
 
 <script>
-
 export default {
   name: 'navbar',
+
   data() {
     return {
       isOpen: false
@@ -52,14 +52,15 @@ export default {
     @media screen and (min-width: 760px)
       opacity: 1
   .spacer
-    height: 61px
+    height: 81px
   .navbar
     font-family: 'Open Sans', sans-serif
     z-index: 1
     position: fixed
     width: 100%
-    background: rgba(255,255,255, 0.8)
+    background: rgba(255,255,255, 1)
     border-bottom: 1px solid black
+    padding: 10px 0
     .container
       width: 100%
       margin: 0 auto
@@ -82,11 +83,11 @@ export default {
         width: 100%
         float: right
         position: absolute
-        top: 61px
-
+        top: 81px
         background: rgba(255,255,255, 0.8)
         border-bottom: 1px solid black
         @media screen and (min-width: 790px)
+          background: initial
           position: static
           margin-right: 40px
           display: block

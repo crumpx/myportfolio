@@ -1,33 +1,61 @@
 <template lang="html">
-  <section class="about-me">
-    <div class="container">
-      <div class="inner">
-        <img src="https://avatars.githubusercontent.com/u/4764314?v=3" alt="Gang Zhao's Picture">
-        <h1>Hi, My name is Gang</h1>
-        <h4>I am a web developer.</h4>
-        <p>I currently live in NYC.</p>
-      </div>
-    </div>
+  <section class="about-me" >
+    <div class="container" >
+      <div class="inner clearfix" >
+          <h1 >Hi, My name is Gang.</h1>
+            <p id='aboutme'>
+            A Chinese web developer Currently live in New York City.
+            <br><br>
+            In my free time, I like to look at beautiful stuff.
+          </p>
+          <div class="skillset" >
+            <h1>My Skillset</h1>
+            <ul v-for="skill of skills">
+              <li>{{skill}}</li>
 
+            </ul>
+          </div>
+          <div class="toolbox">
+            <h1>My Toolbox</h1>
+            <ul v-for="tool of toolbox">
+              <li>{{tool}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
   </section>
 </template>
 
 <script>
-
 export default {
   name: 'aboutme',
+  data() {
+    return {
+      skills: ["HTML5","JavaScript","CSS3","Photoshop","PSD to HTML"],
+      toolbox: [
+        "HTML + CSS + JavaScript",
+        "Atom",
+        "Sublime Text 3",
+        "Github",
+        "Adobe Photoshop",
+        "Vuejs",
+        "Nodejs",
+        "Express.js",
+      ]
+    }
+  },
 }
 </script>
 
 <style lang="sass" scoped>
   .about-me
-    // height: 60%
-    margin-bottom: 80px
+    margin-top: 60px
     .container
-      height: 100%
+      padding: 30px 20px
+
       position: relative
       overflow: hidden
-      background: rgba(0,214,90,0.6)
+      background: rgba(252,74,26, 0.6)
       &:after
         content: ' '
         position: absolute
@@ -40,20 +68,51 @@ export default {
         background: url('https://images.pexels.com/photos/1826/wood-nature-sunny-forest.jpg')
         background-position: center
         background-size: cover
-      .inner
-        padding: 40px
-        width: 80%
+      @media screen and (min-width: 760px)
+        /*height: calc(100vh - 81px)*/
+        padding: 120px
+    .inner
+      height: 100%
+      color: #fff
+      @media screen and (min-width: 1300px)
+        width: 1280px
         margin: 0 auto
-        text-align: center
-        img
-          width: 150px
-          height: auto
-          border-radius: 100%
-          border: 4px solid #fff
-          @media screen
+      h1
+        font-weight: bold
+        font-size: 44px
+        padding: 10px 0
+      p
+        font-size: 22px
+        padding: 32px 0
+        line-height: 1.0
 
+      .skillset, .toolbox
+        margin: 10px 0
+        li
+          line-height: 1.2
+        @media screen and (min-width: 600px)
+          width: 50%
+      .toolbox
+        @media screen and (min-width:600px)
+          float: right
+      .skillset
+        @media screen and (min-width: 600px)
+          float: left
+  .more-aboutme
 
-
-
+    padding-top: 40px
+    @media screen and (min-width: 1300px)
+      width: 1280px
+      margin: 0 auto
+    button
+      cursor: pointer
+      padding: 20px
+      font-size: 22px
+      background: none
+      border: 1px solid #fff
+      color: #fff
+      &:hover
+        border: 1px solid #fff
+        background: rgba(252,74,26, 0.6)
 
 </style>

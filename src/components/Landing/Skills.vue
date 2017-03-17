@@ -5,7 +5,7 @@
         <div class="item-title bg-color-green">
           <i class="fa fa-html5" aria-hidden="true"></i>
           <i class="fa fa-css3" aria-hidden="true"></i>
-          <img src="../../assets/title-bg-skill-1.png" alt="">
+          <img src="../../assets/title-bg-skill-1.png" alt="web design skill">
           <h3>Web Design</h3>
         </div>
         <div class="item-desc">
@@ -15,17 +15,26 @@
       </div>
       <div class="item">
         <div class="item-title bg-color-purple">
-          <!-- <i class="fa fa-desktop" aria-hidden="true"></i>
-          <i class="fa fa-laptop" aria-hidden="true"></i>
-          <i class="fa fa-tablet" aria-hidden="true"></i>
-          <i class="fa fa-mobile" aria-hidden="true"></i> -->
           <i class="fa fa-code" aria-hidden="true"></i>
-          <img src="../../assets/title-bg-skill-2.png" alt="">
+          <img src="../../assets/title-bg-skill-2.png" alt="web apps skill">
           <h3>Web Apps</h3>
         </div>
         <div class="item-desc">
           <p>Reactive web application using the most advanced technologies.<br><br>I use Javascript, MongoDB, Vuejs and
             many other modern frameworks to build apps that run everywhere.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-title bg-color-orange">
+          <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+          <img src="../../assets/title-bg-skill-3.png" alt="seo skill">
+          <h3>SEO</h3>
+        </div>
+        <div class="item-desc">
+          <p>Search Engine Optimization is critical.<br><br>
+            Correctly optimized web site or web page get high up in Google search results,
+            and more exposure means more visiters.
           </p>
         </div>
       </div>
@@ -54,10 +63,13 @@ export default {
     background: rgba(252,74,26, 0.6)
 
   .my-skills
-    margin-bottom: 80px
+    margin: 80px 0
     .container
-      max-width: 1024px
+      width: 100%
       margin: 0 auto
+
+      @media screen and (min-width: 800px)
+        max-width: 860px
       .item
         box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5)
         border-radius: 4px
@@ -72,6 +84,8 @@ export default {
             font-size: 150%
         .item-desc
           padding: 10px 20px 20px 20px
+          background: #fff
+          border-radius: 0 0 5px 5px
           strong
             font-size: 16px
             margin: 10px 0
@@ -92,28 +106,17 @@ export default {
             color: #fff
             font-size: 120%
             margin-bottom: 12px
-            // z-index: 2
           h3
             color: #fff
             font-size: 34px
             margin-bottom: 10px
             font-weight: bold
-          /*&:after
-            content: ' '
-            display: block
-            position: absolute
-            left: 0
-            top: 0
-            width: 100%
-            height: 100%
-            z-index: -1
-            background: url('../../assets/title-bg-skill-2.png') no-repeat
-            background-size: cover
-            background-position: center*/
-
-        @media screen and (min-width: 1024px)
-          // width: 33%
+        @media screen and (min-width: 800px)
           float: left
-          margin: 40px
+          margin: 0px 20px
+
+          &:last-child
+            margin-right: 0px
+
 
 </style>

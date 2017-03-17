@@ -9,7 +9,7 @@
                 <div class="scroll-down animated infinite bounce">
                   <strong>scroll down</strong>
                   <img src="../../assets/mouse.svg" alt="">
-                  <!-- <i class="arraw">⇓</i> -->
+                  <i class="arraw">⇓</i>
                 </div>
             </div>
           </slide>
@@ -42,14 +42,11 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  // .bounce
-  //   transition-duration: 2s
   .hero
     text-align: center
-    height: 100vh
     width: 100vw
     .img-box
-      height: calc(100vh - 120px)
+      height: calc(100vh - 81px)
       position: relative
       .caption
         padding: 50px
