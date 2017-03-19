@@ -35,7 +35,7 @@
         <div class="item-desc">
           <p>Search Engine Optimization is critical.<br><br>
             Correctly optimized web site or web page get high up in Google search results,
-            and more exposure means more visiters.
+            and more exposure means more vistors.
           </p>
         </div>
       </div>
