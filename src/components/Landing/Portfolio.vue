@@ -19,8 +19,8 @@
           </ul>
         </div>
         <div class="project-links">
-          <a href="https://crumpx.github.io/pomodoro/">Demo</a>
-          <a href="https://github.com/crumpx/pomodoro/">Source Code</a>
+          <a :href="project.demo">Demo</a>
+          <a :href="project.source">Source Code</a>
         </div>
       </div>
   </template>
@@ -71,8 +71,8 @@ export default {
           pic: require('../../assets/portfolio/website-casesolved.png'),
           desc: 'A responsive landing website made for a computer and phone repair business.',
           skills: ['HTML', 'Sass', 'JavaScript', 'JQuery', "Jekyll Engine", "Github Pages"],
-          demo: 'https://casesolved.us/',
-        source: 'https://casesolved.us/' },
+          demo: 'http://casesolved.us/',
+        source: 'http://casesolved.us/' },
 
       ],
 
