@@ -51,7 +51,7 @@ export default {
         source: 'https://github.com/crumpx/jscalculator/' },
         {name: 'Twitch Streamer',
           pic: require('../../assets/portfolio/twitch-streamers.png'),
-          desc: 'Get notify when your favorated streamer is online!',
+          desc: 'Get notified when your favorite streamer is online!',
           skills: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'ajax'],
           demo: 'https://crumpx.github.io/twitchstreamers/',
         source: 'https://github.com/crumpx/twitchstreamers/' },
