@@ -2,20 +2,23 @@
   <content>
 <Carousel></Carousel>
 <aboutme></aboutme>
-<!-- <skills></skills> -->
+
+<portfolio></portfolio>
 </content>
 </template>
 
 <script>
 import Carousel from '@/components/Landing/Carousel'
 import Aboutme from '@/components/Landing/Aboutme'
-// import Skills from '@/components/Landing/Skills'
+import Portfolio from '@/components/Landing/Portfolio'
+
 
 export default {
   components: {
     Carousel,
-    // Skills,
-    Aboutme
+    Aboutme,
+    Portfolio,
+
   }
 }
 </script>

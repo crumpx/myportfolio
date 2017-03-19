@@ -1,46 +1,57 @@
 <template lang="html">
-  <section class="about-me" >
+  <section class="about-me" id='aboutme'>
     <div class="container" >
       <div class="inner clearfix" >
           <h1 >Hi, My name is Gang.</h1>
-            <p id='aboutme'>
+            <p >
             A Chinese web developer Currently live in New York City.
             <br><br>
             In my free time, I like to look at beautiful stuff.
           </p>
+          <div class="social">
+            <a href="tencent://message/?uin=316155"><i class="fa fa-qq" aria-hidden="true"></i></a>
+            <a href="https://github.com/crumpx"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+            <a href="https://www.freecodecamp.com/crumpx"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+            <a href="http://crumpz.info/www.linkedin.com/in/gang-zhao-198201"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+          </div>
           <div class="skillset" >
-            <h1>My Skillset</h1>
+            <h2>My Skillset</h2>
             <ul v-for="skill of skills">
               <li>{{skill}}</li>
 
             </ul>
           </div>
           <div class="toolbox">
-            <h1>My Toolbox</h1>
+            <h2>My Toolbox</h2>
             <ul v-for="tool of toolbox">
               <li>{{tool}}</li>
             </ul>
           </div>
         </div>
+        <skills></skills>
       </div>
+
   </section>
 </template>
 
 <script>
+import Skills from '@/components/Landing/Skills'
 export default {
   name: 'aboutme',
+  components: {
+    Skills
+  },
   data() {
     return {
-      skills: ["HTML5","JavaScript","CSS3","Photoshop","PSD to HTML"],
+      skills: ["HTML5","JavaScript","CSS3","Photoshop","PSD to HTML", "Vuejs","Nodejs",
+              "Express.js","Front/Backend development"],
       toolbox: [
-        "HTML + CSS + JavaScript",
         "Atom",
         "Sublime Text 3",
-        "Github",
         "Adobe Photoshop",
-        "Vuejs",
-        "Nodejs",
-        "Express.js",
+        "Adobe Illustrator"
+
       ]
     }
   },
@@ -52,10 +63,9 @@ export default {
     margin-top: 60px
     .container
       padding: 30px 20px
-
       position: relative
       overflow: hidden
-      background: rgba(252,74,26, 0.6)
+      background: rgba(0,0,0, 0.7)
       &:after
         content: ' '
         position: absolute
@@ -65,26 +75,37 @@ export default {
         height: 100%
         z-index: -1
         opacity: 0.6
-        background: url('https://images.pexels.com/photos/1826/wood-nature-sunny-forest.jpg')
+        background: url('https://images.pexels.com/photos/237997/pexels-photo-237997.jpeg')
         background-position: center
         background-size: cover
       @media screen and (min-width: 760px)
-        /*height: calc(100vh - 81px)*/
         padding: 120px
     .inner
       height: 100%
       color: #fff
       @media screen and (min-width: 1300px)
-        width: 1280px
+        width: 960px
         margin: 0 auto
-      h1
+      h1, h2
         font-weight: bold
         font-size: 44px
         padding: 10px 0
+      h2
+        font-size: 28px
       p
         font-size: 22px
         padding: 32px 0
         line-height: 1.0
+      .social
+        padding-bottom: 20px
+        a
+          text-decoration: none
+          color: #fff
+          &:first-child
+            margin-right: 20px
+        i
+          font-size: 120%
+          padding-right: 12px
 
       .skillset, .toolbox
         margin: 10px 0
@@ -98,21 +119,5 @@ export default {
       .skillset
         @media screen and (min-width: 600px)
           float: left
-  .more-aboutme
-
-    padding-top: 40px
-    @media screen and (min-width: 1300px)
-      width: 1280px
-      margin: 0 auto
-    button
-      cursor: pointer
-      padding: 20px
-      font-size: 22px
-      background: none
-      border: 1px solid #fff
-      color: #fff
-      &:hover
-        border: 1px solid #fff
-        background: rgba(252,74,26, 0.6)
 
 </style>

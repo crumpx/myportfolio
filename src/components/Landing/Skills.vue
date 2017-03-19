@@ -1,6 +1,7 @@
 <template lang="html">
-  <section class="my-skills clearfix">
-    <div class="container">
+  <section class="my-skills ">
+    <div class="container clearfix">
+      <h1>What Can I do</h1>
       <div class="item">
         <div class="item-title bg-color-green">
           <i class="fa fa-html5" aria-hidden="true"></i>
@@ -29,7 +30,7 @@
         <div class="item-title bg-color-orange">
           <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
           <img src="../../assets/title-bg-skill-3.png" alt="seo skill">
-          <h3>SEO</h3>
+          <h3>Website SEO</h3>
         </div>
         <div class="item-desc">
           <p>Search Engine Optimization is critical.<br><br>
@@ -47,7 +48,6 @@
 
 export default {
   name: 'skills',
-
 }
 </script>
 
@@ -63,13 +63,31 @@ export default {
     background: rgba(252,74,26, 0.6)
 
   .my-skills
-    margin: 80px 0
-    .container
-      width: 100%
-      margin: 0 auto
 
-      @media screen and (min-width: 800px)
-        max-width: 860px
+    .container
+      padding: 80px 0
+      position: relative
+      overflow: hidden
+      margin: 0 auto
+      max-width: 960px
+      &:after
+        content: ' '
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        opacity: 0.6
+        background: url('https://images.pexels.com/photos/273238/pexels-photo-273238.jpeg')
+        background-position: center
+        background-size: cover
+      h1
+        font-weight: bold
+        font-size: 44px
+        padding: 0 0 40px 0
+        color: #fff
+
       .item
         box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5)
         border-radius: 4px
@@ -111,7 +129,7 @@ export default {
             font-size: 34px
             margin-bottom: 10px
             font-weight: bold
-        @media screen and (min-width: 800px)
+        @media screen and (min-width: 860px)
           float: left
           margin: 0px 20px
 

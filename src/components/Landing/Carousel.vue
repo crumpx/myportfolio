@@ -1,5 +1,5 @@
 <template lang="html">
-  <content>
+  <section>
     <div class="hero">
       <carousel :perPage="1" :autoplay="true">
         <template v-for="item of test">
@@ -16,7 +16,7 @@
         </template>
       </carousel>
     </div>
-  </content>
+  </section>
 </template>
 
 <script>
@@ -34,7 +34,6 @@ export default {
         {caption: 'I Am A Cat Person', bg: 'https://images.pexels.com/photos/172/animal-pet-close-up-view-hairs.jpg'},
         {caption: 'I Am A Self Learner', bg: 'https://images.pexels.com/photos/85583/books-85583.jpeg'},
         {caption: 'I Love Coding', bg: 'https://images.pexels.com/photos/270557/pexels-photo-270557.jpeg'},
-        // {caption: 'This Site Is Powered By Vue.js', bg: 'https://cdn.auth0.com/blog/vuejs/vue-logo.png'},
       ]
     }
   },
@@ -55,6 +54,8 @@ export default {
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+        @media screen and (min-width: 760px)
+          padding: 80px
         h2
           font-family: 'Open Sans', sans-serif
           font-weight: 400
