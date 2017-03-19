@@ -4,7 +4,7 @@
       <div class="inner clearfix" >
           <h1 >Hi, My name is Gang.</h1>
             <p >
-            A Chinese web developer Currently live in New York City.
+            A Chinese web developer currently live in New York City.
             <br><br>
             In my free time, I like to look at beautiful stuff.
           </p>
