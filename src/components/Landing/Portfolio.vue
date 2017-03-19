@@ -39,7 +39,7 @@ export default {
       projects: [
         {name: 'Pomodoro Clock',
           pic: require('../../assets/portfolio/pomodoro-clock.png'),
-          desc: 'Applying Pomodoro technique will boost your effectioncy at work.',
+          desc: 'Applying Pomodoro technique will boost your efficiency at work.',
           skills: ['HTML', 'CSS', 'JavaScript', 'JQuery'],
           demo: 'https://crumpx.github.io/pomodoro/',
         source: 'https://github.com/crumpx/pomodoro/' },
