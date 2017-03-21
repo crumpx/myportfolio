@@ -13,9 +13,10 @@
           <p>{{project.desc}}</p>
           </div>
         <div class="project-uses">
-
-          <ul v-for="skill of project.skills">
+          <ul>
+            <template v-for="skill of project.skills">
             <li>{{skill}}</li>
+            </template>
           </ul>
         </div>
         <div class="project-links">
@@ -84,7 +85,6 @@ export default {
 <style lang="sass" scoped>
 
   .portfolio
-
     position: relative
     overflow: hidden
     background: rgba(0,54,102, 0.5)
@@ -144,17 +144,21 @@ export default {
             font-size: 16px
         .project-uses
           ul
-            margin: 25px
+            margin: 20px
             li
-              padding-bottom: 12px 0
-              border-bottom: 1px solid black
+              margin-bottom: 12px
+              padding-bottom: 5px
+              border-bottom: 1px solid #ccc
         .project-links
           margin: 0 20px
           a
             cursor: pointer
             font-size: 80%
             text-decoration: none
-            color: #555
+            padding-right: 20px
+            color: #333
+            &:hover
+              color: #bbf
         &:hover
           box-shadow: 0px 0px 40px 0 #000
         @media screen and (min-width: 700px)

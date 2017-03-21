@@ -10,7 +10,7 @@
           <h3>Web Design</h3>
         </div>
         <div class="item-desc">
-          <p>Creating Responsive, modern, beautiful and content rich, SEO optimized website.<br><br>
+          <p>Creating Responsive, modern, beautiful and content rich, SEO optimized website.</p><p>
           The trending single page webpage design makes evertying interesting.</p>
         </div>
       </div>
@@ -21,7 +21,7 @@
           <h3>Web Apps</h3>
         </div>
         <div class="item-desc">
-          <p>Reactive web application using the most advanced technologies.<br><br>I use Javascript, MongoDB, Vuejs and
+          <p>Reactive web application using the most advanced technologies.</p><p>I use Javascript, MongoDB, Vuejs and
             many other modern frameworks to build apps that run everywhere.
           </p>
         </div>
@@ -33,7 +33,7 @@
           <h3>Website SEO</h3>
         </div>
         <div class="item-desc">
-          <p>Search Engine Optimization is critical.<br><br>
+          <p>Search Engine Optimization is critical.</p><p>
             Correctly optimized web site or web page get high up in Google search results,
             and more exposure means more vistors.
           </p>
