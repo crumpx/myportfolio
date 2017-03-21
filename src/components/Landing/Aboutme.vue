@@ -12,7 +12,7 @@
             <a href="tencent://message/?uin=316155"><i class="fa fa-qq" aria-hidden="true"></i></a>
             <a href="https://github.com/crumpx"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
             <a href="https://www.freecodecamp.com/crumpx"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
-            <a href="http://crumpz.info/www.linkedin.com/in/gang-zhao-198201"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/gang-zhao-198201"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 
           </div>
           <div class="skillset" >
