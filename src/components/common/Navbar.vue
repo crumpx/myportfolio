@@ -42,13 +42,13 @@ export default {
 
 <style lang="sass" scoped>
   .open
-    left: 0
+    top: 0
     opacity: 1
-    transition: all 0.6s ease-in-out
+    transition: all 0.2s ease-in-out
   .close
-    left: -100%
+    top: 100%
     opacity: 0
-    transition: all 0.6s ease-in-out
+    transition: all 0.2s ease-in-out
     @media screen and (min-width: 760px)
       opacity: 1
   .spacer
