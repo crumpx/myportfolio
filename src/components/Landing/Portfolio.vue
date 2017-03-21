@@ -131,7 +131,8 @@ export default {
           overflow: hidden
           border-radius: 5px 5px 0 0
           img
-            width: 280px
+            width: 279px
+            border-bottom: 1px solid black
         .project-desc
           h3, p
             font-size: 25px
