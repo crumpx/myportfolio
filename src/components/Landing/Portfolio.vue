@@ -1,5 +1,5 @@
 <template lang="html">
-    <section class='portfolio' id='portfolio'>
+    <section class='portfolio'>
 
     <div class="container clearfix">
       <h1>Here are some of the things I made</h1>

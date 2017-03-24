@@ -9,11 +9,16 @@
 
       <div v-bind:class="[ isOpen ? 'open' : 'close', 'nav-menu']">
         <ul>
-          <!-- <li v-on:click="openMenu()"><router-link to="" title='Home'>Home</router-link></li> -->
-          <li v-on:click="openMenu()"> <a href="javascript:;"  v-scroll-to="'#aboutme'" title='About Me'>About</a></li>
-          <li v-on:click="openMenu()"> <a href="javascript:;"  v-scroll-to="'#portfolio'"  title='My Portfolio'>Portfolio</a></li>
-          <!-- <li v-on:click="openMenu()"> <a href="javascript:;" title='Services I offer'>Service</a></li> -->
-          <!-- <li v-on:click="openMenu()"> <a href="javascript:;" title='My Blog'>Blog</a></li> -->
+          <template v-if="$route.fullPath == '/'">
+            <li> <a href="#" v-scroll-to="'#aboutme'" title='About Me' v-on:click="openMenu()">About</a></li>
+            <li> <a href="#" v-scroll-to="'#portfolio'" title='My Portfolio' v-on:click="openMenu()">Portfolio</a></li>
+            <li><router-link to="/blog">Blog</router-link></li>
+          </template>
+
+          <template v-if="$route.fullPath == '/blog'">
+            <li><router-link to="/">Back To Home</router-link></li>
+          </template>
+
         </ul>
       </div>
       </div>

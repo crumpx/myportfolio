@@ -1,5 +1,5 @@
 <template lang="html">
-  <section class="about-me" id='aboutme'>
+  <section class="about-me">
     <div class="container" >
       <div class="inner clearfix" >
           <h1 >Hi, My name is Gang.</h1>

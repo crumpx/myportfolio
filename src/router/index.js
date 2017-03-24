@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Landing from '@/components/Landing/Landing'
+import Blog from '@/components/Blog/Blog'
 Vue.use(Router)
 
 export default new Router({
@@ -10,6 +11,12 @@ export default new Router({
       path: '/',
       name: 'Landing',
       component: Landing
-    }
+    },
+    {
+      path: '/Blog',
+      name: 'Blog',
+      component: Blog
+    },
+
   ]
 })

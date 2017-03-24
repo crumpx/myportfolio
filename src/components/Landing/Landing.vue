@@ -1,9 +1,9 @@
 <template lang="html">
   <content>
 <Carousel></Carousel>
-<aboutme></aboutme>
+<aboutme  id='aboutme'></aboutme>
+<portfolio id='portfolio'></portfolio>
 
-<portfolio></portfolio>
 </content>
 </template>
 
