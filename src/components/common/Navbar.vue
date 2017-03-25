@@ -3,7 +3,7 @@
     <nav class='navbar '>
       <div class="container clearfix">
       <div class="brand">
-        <strong>Gang</strong>
+        <h1>Gang</h1>
         </div>
       <div class="nav-toggle" v-on:click="openMenu()">☰</div>
 
@@ -74,10 +74,12 @@ export default {
         margin-left: 20px
         @media screen and (min-width: 790px)
           margin-left: 40px
-        strong
-          font-size: 30px
-          line-height: 60px
-          font-weight: 700
+        h1
+          font-size: 42px
+          line-height: 1.3
+          font-weight: 800
+          color: #545
+
       .nav-toggle
         float: right
         line-height: 60px

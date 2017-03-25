@@ -11,7 +11,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "vue": "^2.2.2",
-    "vue-carousel": "^0.6.4",
+    "vue-carousel": "https://github.com/crumpx/vue-carousel/tarball/master",
     "vue-router": "^2.2.0",
     "vue-scrollto": "^2.6.4"
   },
