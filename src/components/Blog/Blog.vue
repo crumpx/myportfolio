@@ -2,24 +2,23 @@
   <content>
     <div class="blog-list">
       <div class="container">
-
       <template v-for="blog of blogs">
         <article class="blog">
-
           <h1>{{ blog.title }}</h1>
           <h5>{{blog.subtitle}}</h5>
+          <template v-for="tag of blog.tag">
+          <a href="">{{tag}}</a>
+        </template>
           <strong class="right" v-if="blog.author">By: {{ blog.author.fullname }}</strong>
           <strong class="right" v-else>By: Unknown</strong>
           <span class="right">on {{blog.createdAt | formatDate}}</span>
           <a href="#">share</a>
           <a href="#">edit</a>
-          <p v-html='blog.content'></p>
+          <p v-html="blog.content"></p>
+          <button><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>200</span></button>
         </article>
           <hr>
-
       </template>
-
-
     </div> <!-- container -->
     </div>
 
@@ -33,6 +32,10 @@ export default {
   data() {
     return {
       blogs: {},
+      contentClass: {
+        margin: '10px 0',
+        fontSize: '18px'
+      }
     }
   },
   methods: {
@@ -46,7 +49,6 @@ export default {
       let year = aDate.getFullYear()
       let hour = aDate.getHours()
       let minutes = aDate.getMinutes() < 10 ? '0'+aDate.getMinutes() : aDate.getMinutes()
-
       return month + '/' + day + '/' + year + ' ' + hour + ':' + minutes
     }
   },
@@ -64,18 +66,16 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
   .right
     text-align: right
     display: block
     line-height: 1.5
+
   .blog-list
     background: #eee
     .container
       max-width: 790px
       margin: 0 auto
-      
-
       .blog
         a
           text-decoration: none
@@ -99,7 +99,7 @@ export default {
 
         strong
           display: block
-          // font-weight: bold
+
         p
           margin: 10px 0
           font-size: 18px
@@ -107,4 +107,14 @@ export default {
           &::first-letter
             font-size: 24px
             font-weight: 700
+        button
+          border: none
+          font-size: 22px
+          margin-right: 6px
+          cursor: pointer
+          span
+            margin-left: 6px
+
+
+
 </style>

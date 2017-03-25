@@ -15,8 +15,9 @@
             <li><router-link to="/blog">Blog</router-link></li>
           </template>
 
-          <template v-if="$route.fullPath == '/blog'">
+          <template v-if="$route.fullPath == '/blog' || $route.fullPath == '/blog/login'">
             <li><router-link to="/">Back To Home</router-link></li>
+            <li><router-link to="/blog/login">Login</router-link></li>
           </template>
 
         </ul>
@@ -41,7 +42,6 @@ export default {
      this.isOpen = !this.isOpen
    },
  },
-
 }
 </script>
 
@@ -79,7 +79,6 @@ export default {
           line-height: 1.3
           font-weight: 800
           color: #545
-
       .nav-toggle
         float: right
         line-height: 60px
@@ -115,5 +114,4 @@ export default {
             &:hover
               background: #999
               color: #fff
-
 </style>
