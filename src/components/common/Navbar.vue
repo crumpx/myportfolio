@@ -12,12 +12,12 @@
           <template v-if="$route.fullPath == '/'">
             <li> <a href="#" v-scroll-to="'#aboutme'" title='About Me' v-on:click="openMenu()">About</a></li>
             <li> <a href="#" v-scroll-to="'#portfolio'" title='My Portfolio' v-on:click="openMenu()">Portfolio</a></li>
-            <li><router-link to="/blog">Blog</router-link></li>
+            <li><router-link to="/blogs">Blog</router-link></li>
           </template>
 
-          <template v-if="$route.fullPath == '/blog' || $route.fullPath == '/blog/login'">
+          <template v-if="$route.fullPath == '/blogs' || $route.fullPath == '/blog/login'">
             <li><router-link to="/">Back To Home</router-link></li>
-            <li><router-link to="/blog/login">Login</router-link></li>
+            <li><router-link to="/blogs/login">Login</router-link></li>
           </template>
 
         </ul>

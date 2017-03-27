@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Landing from '@/components/Landing/Landing'
-import Blog from '@/components/Blog/Blog'
+import Blogs from '@/components/Blog/Blogs'
 import Login from '@/components/User/Login'
 Vue.use(Router)
 
@@ -14,12 +14,12 @@ export default new Router({
       component: Landing
     },
     {
-      path: '/Blog',
-      name: 'Blog',
-      component: Blog
+      path: '/blogs',
+      name: 'Blogs',
+      component: Blogs
     },
     {
-      path: '/blog/login',
+      path: '/blogs/login',
       name: 'login',
       component: Login
     },

@@ -18,7 +18,6 @@ export default {
     Carousel,
     Aboutme,
     Portfolio,
-
   }
 }
 </script>

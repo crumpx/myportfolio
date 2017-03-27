@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-var vueScrollto = require('vue-scrollto');
+import vueScrollto from 'vue-scrollto'
+import VueHtml5Editor from 'vue-html5-editor'
+import editorOption from './config'
 
+Vue.use(VueHtml5Editor,editorOption)
 Vue.use(vueScrollto)
 Vue.config.productionTip = false
 
