@@ -2,7 +2,8 @@
   <section>
     <div class="blog-list">
       <div class="container">
-        <blog v-for="blog of blogs" v-bind:blg="blog" :key="blog.id"></blog>
+        <blog v-for="blog of blogs" v-bind:blog="blog" :key="blog.id"></blog>
+
     </div> <!-- container -->
     </div>
 
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+
 import axios from 'axios'
 import Blog from './Blog'
 export default {
@@ -26,7 +28,7 @@ export default {
     }
   },
   components: {
-    'blog': Blog
+    'blog': Blog,
   },
   created: function(){
     this.fetch();

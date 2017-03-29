@@ -1,50 +1,38 @@
 <template lang="html">
   <section>
-    <article class="blog" v-if="!isEditing">
-        <h1>{{ blg.title }}</h1>
-        <h5>{{blg.subtitle}}</h5>
-        <template v-for="tag of blg.tag">
+    <article class="blog">
+        <h1>{{ blog.title }}</h1>
+        <h5>{{blog.subtitle}}</h5>
+        <template v-for="tag of blog.tag">
           <a href="">{{tag}}</a>
         </template>
-        <strong class="right" v-if="blg.author">By: {{ blg.author.fullname }}</strong>
+        <strong class="right" v-if="blog.author">By: {{ blog.author.fullname }}</strong>
         <strong class="right" v-else>By: Unknown</strong>
-        <span class="right">on {{blg.createdAt | formatDate}}</span>
+        <span class="right">on {{blog.createdAt | formatDate}}</span>
         <a href="#">share</a>
-        <a @click="toggleEditing">edit</a>
-        <p v-html="blg.content"></p>
+        <a @click="toggleEditing(blog)">edit</a>
+        <p v-html="blog.content"></p>
         <button><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>200</span></button>
     </article>
-    <template v-if="isEditing">
-      <editor v-bind:blg="blg" v-bind:mode='mode'></editor>
-      <button class="cancel" @click="onCancel">Cancel</button>
-    </template>
-
   </section>
 </template>
 
 <script>
 import Editor from './Editor'
 export default {
-  props: ['blg'],
-  data() {
-    return {
-      isEditing: false,
-      mode: 'editing'
+  props: ['blog'],
+
+  computed: {
+    isEditing() {
+      return this.$store.getters.isEditing
     }
   },
   methods: {
-    toggleEditing() {
-      this.org_title = this.blg.title
-      this.org_subtitle = this.blg.subtitle
-      this.org_content = this.blg.content
-      this.isEditing = !this.isEditing
+    toggleEditing(blog) {
+      this.$store.commit('onEditingBlog', blog)
+      this.$router.push({path: '/blogs/edit'})
     },
-    onCancel(){
-      this.isEditing = !this.isEditing
-      this.blg.title = this.org_title
-      this.blg.subtitle = this.org_subtitle
-      this.blg.content = this.org_content
-    }
+
   },
   filters: {
     formatDate: date => {
@@ -69,17 +57,7 @@ export default {
     text-align: right
     display: block
     line-height: 1.5
-  .cancel, save
-    border: 0
-    margin-top: 10px
-    font-size: 18px
-    font-weight: 800
-    color: #fff
-    padding: 10px 20px
-    background: rgba(255,6,6,.7)
-    cursor: pointer
-    &:hover
-      box-shadow: 1px 1px 12px 0 #555
+
 
   .blog
     a
