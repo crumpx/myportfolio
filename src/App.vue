@@ -51,6 +51,7 @@ body {
 	line-height: 1;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
+  /*font-size: 16px;*/
 }
 ol, ul {
 	list-style: none;

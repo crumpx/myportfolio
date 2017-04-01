@@ -3,8 +3,7 @@
     <div class="blog-list">
       <div class="container">
         <blog v-for="blog of blogs" v-bind:blog="blog" :key="blog.id"></blog>
-
-    </div> <!-- container -->
+      </div> <!-- container -->
     </div>
 
   </section>
@@ -38,9 +37,8 @@ export default {
 
 <style lang="sass" scoped>
   section
-    background: #eee
     .blog-list
-      background: #eee
+      background: #fff
       .container
         max-width: 790px
         margin: 0 auto

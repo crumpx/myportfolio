@@ -1,8 +1,13 @@
 <template lang="html">
   <content>
     <div class="container">
-    <textarea class="editor-window" :value='input' @input="update" ></textarea>
-    <preview class="editor-window" :raw="input">  </preview>
+      <div class="edit">
+        <input type="text" placeholder="tags">
+        <textarea  :value='input' @input="update" ></textarea>
+        <button type="button" name="button">Cancel</button>
+        <button type="button" name="button">Save</button>
+      </div>
+      <preview class="preview" :raw="input"></preview>
   </div>
   </content>
 </template>
@@ -16,10 +21,20 @@ export default {
       input: ''
     }
   },
+  computed: {
+    input() {
+      return this.$store.getters.blog.content
+    }
+  },
   methods: {
     update(e) {
-      this.input = e.target.value
+      this.$store.commit('onEditingBlogContent',e.target.value )
+      this.input = e.target.value || ''
+      console.log(decodeURIComponent(this.input))
     }
+  },
+  created() {
+    this.input = this.$store.getters.blog.content
   },
 
   components: {
@@ -32,13 +47,25 @@ export default {
 <style lang="sass" >
   .container
     max-width: 70%
-
     margin: 0 auto
-    .editor-window
+    .edit, .preview
       margin-top: 40px
       min-height: 600px
       margin-right: 40px
       width: 40%
       float: left
+    .edit
+      input, textarea
+        width: 80%
+        padding: 10px 20px
+        margin-bottom: 10px
+      textarea
+        height: 60vh
+        display: block
+
+
+
+
+
 
 </style>

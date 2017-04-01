@@ -6,7 +6,9 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     mode: '',
-    blog: {}
+    blog: {
+      content: ''
+    }
   },
   getters: {
     blog(state) {

@@ -1,24 +1,21 @@
 <template lang="html">
-  <section>
-    <article class="blog">
-        <h1>{{ blog.title }}</h1>
-        <h5>{{blog.subtitle}}</h5>
+  <article class="blog">
         <template v-for="tag of blog.tag">
           <a href="">{{tag}}</a>
         </template>
         <strong class="right" v-if="blog.author">By: {{ blog.author.fullname }}</strong>
         <strong class="right" v-else>By: Unknown</strong>
         <span class="right">on {{blog.createdAt | formatDate}}</span>
-        <a href="#">share</a>
+        <a href="#">share</a> \
         <a @click="toggleEditing({blog: blog, mode: 'editing'})">edit</a>
-        <p v-html="blog.content"></p>
+        <preview :raw="blog.content"></preview>
         <button><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>200</span></button>
     </article>
-  </section>
 </template>
 
 <script>
-import Editor from './Editor'
+
+import Preview from './Preview'
 export default {
   props: ['blog'],
 
@@ -46,7 +43,7 @@ export default {
     }
   },
   components: {
-    Editor
+    Preview
   },
 }
 
@@ -57,37 +54,18 @@ export default {
     text-align: right
     display: block
     line-height: 1.5
-
-
   .blog
+    background: #eee
+    margin: 10px 0
+    padding: 20px 20px
+    border-radius: 6px
     a
       text-decoration: none
       color: #666
       &:hover
         text-decoration: underline
         color: #000
-    padding: 20px
-    h1
-      font-size: 48px
-      font-weight: 800
-      color: #777
-      word-wrap: break-word
 
-    h5
-      font-style: italic
-      font-size: 24px
-      color: #555
-      margin: 12px 0 20px 0
-
-    strong
-      display: block
-    p
-      margin: 10px 0
-      font-size: 18px
-      line-height: 1.5em
-      &::first-letter
-        font-size: 24px
-        font-weight: 700
     button
       border: none
       font-size: 22px
