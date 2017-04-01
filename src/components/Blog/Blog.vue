@@ -10,7 +10,7 @@
         <strong class="right" v-else>By: Unknown</strong>
         <span class="right">on {{blog.createdAt | formatDate}}</span>
         <a href="#">share</a>
-        <a @click="toggleEditing(blog)">edit</a>
+        <a @click="toggleEditing({blog: blog, mode: 'editing'})">edit</a>
         <p v-html="blog.content"></p>
         <button><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>200</span></button>
     </article>
@@ -23,13 +23,13 @@ export default {
   props: ['blog'],
 
   computed: {
-    isEditing() {
-      return this.$store.getters.isEditing
-    }
+    // isEditing() {
+    //   return this.$store.getters.isEditing
+    // }
   },
   methods: {
-    toggleEditing(blog) {
-      this.$store.commit('onEditingBlog', blog)
+    toggleEditing(payload) {
+      this.$store.commit('onEditingBlog', payload)
       this.$router.push({path: '/blogs/edit'})
     },
 

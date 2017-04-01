@@ -6,12 +6,7 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     mode: '',
-    blog: {
-      title: '',
-      subtitle: '',
-      content: '',
-      tag: '',
-    }
+    blog: {}
   },
   getters: {
     blog(state) {
@@ -20,11 +15,9 @@ export const store = new Vuex.Store({
 
   },
   mutations: {
-    onEditingBlog(state, blog) {
-      state.blog.title = blog.title
-      state.blog.subtitle = blog.subtitle
-      state.blog.content = blog.content
-      state.blog.tag = blog.tag
+    onEditingBlog(state, payload) {
+      state.blog = payload.blog
+      state.mode = payload.mode
     },
     onEditingBlogContent(state, content) {
       state.blog.content = content

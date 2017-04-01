@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import vueScrollto from 'vue-scrollto'
 import  {store}  from './store'
+import hljs from 'highlight.js'
 
 Vue.use(vueScrollto)
 Vue.config.productionTip = false
@@ -16,4 +17,9 @@ new Vue({
   store,
   template: '<App/>',
   components: { App }
+})
+
+Vue.directive('highlightjs', function() {
+  let blocks = this.el.querySelectorAll('pre code');
+  Array.prototype.forEach.call(blocks, Hljs.highlightBlock);
 })
