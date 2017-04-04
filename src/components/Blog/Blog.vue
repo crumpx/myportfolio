@@ -7,7 +7,7 @@
         <strong class="right" v-else>By: Unknown</strong>
         <span class="right">on {{blog.createdAt | formatDate}}</span>
         <a href="#">share</a> \
-        <a @click="toggleEditing({blog: blog, mode: 'editing'})">edit</a>
+        <a href='#' @click="toggleEditing({blog: blog, mode: 'editing'})">edit</a>
         <preview :raw="blog.content"></preview>
         <button><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>200</span></button>
     </article>

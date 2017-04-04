@@ -63,7 +63,6 @@ export default {
     background: rgba(252,74,26, 0.6)
 
   .my-skills
-
     .container
       padding: 80px 0
       position: relative

@@ -1,5 +1,5 @@
 <template lang="html">
-  <content>
+  <content class='editor'>
     <div class="container">
       <div class="edit">
         <input type="text" placeholder="tags">
@@ -45,23 +45,24 @@ export default {
 </script>
 
 <style lang="sass" >
-  .container
-    max-width: 70%
-    margin: 0 auto
-    .edit, .preview
-      margin-top: 40px
-      min-height: 600px
-      margin-right: 40px
-      width: 40%
-      float: left
-    .edit
-      input, textarea
-        width: 80%
-        padding: 10px 20px
-        margin-bottom: 10px
-      textarea
-        height: 60vh
-        display: block
+  .editor
+    .container
+      max-width: 70%
+      margin: 0 auto
+      .edit, .preview
+        margin-top: 40px
+        min-height: 600px
+        margin-right: 40px
+        width: 40%
+        float: left
+      .edit
+        input, textarea
+          width: 80%
+          padding: 10px 20px
+          margin-bottom: 10px
+        textarea
+          height: 60vh
+          display: block
 
 
 

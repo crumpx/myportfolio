@@ -62,6 +62,7 @@ export default {
   .about-me
     margin-top: 60px
     .container
+      width: 100%
       padding: 30px 20px
       position: relative
       overflow: hidden
@@ -83,6 +84,7 @@ export default {
     .inner
       height: 100%
       color: #fff
+      text-align: left
       @media screen and (min-width: 1300px)
         width: 960px
         margin: 0 auto
