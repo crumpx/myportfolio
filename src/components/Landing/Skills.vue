@@ -66,9 +66,8 @@ export default {
     .container
       padding: 80px 0
       position: relative
-      overflow: hidden
       margin: 0 auto
-      max-width: 960px
+      max-width: 1024px
       &:after
         content: ' '
         position: absolute
@@ -81,6 +80,7 @@ export default {
         background: url('https://images.pexels.com/photos/273238/pexels-photo-273238.jpeg')
         background-position: center
         background-size: cover
+
       h1
         font-weight: bold
         font-size: 44px
@@ -130,10 +130,9 @@ export default {
             font-weight: bold
         @media screen and (min-width: 860px)
           float: left
-          margin: 0px 20px
+          margin-left: 20px
 
-          &:last-child
-            margin-right: 0px
+
 
 
 </style>

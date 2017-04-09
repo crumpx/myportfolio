@@ -51,7 +51,6 @@ export default {
         "Sublime Text 3",
         "Adobe Photoshop",
         "Adobe Illustrator"
-
       ]
     }
   },
@@ -62,7 +61,6 @@ export default {
   .about-me
     margin-top: 60px
     .container
-      width: 100%
       padding: 30px 20px
       position: relative
       overflow: hidden
@@ -76,7 +74,7 @@ export default {
         height: 100%
         z-index: -1
         opacity: 0.6
-        background: url('https://images.pexels.com/photos/237997/pexels-photo-237997.jpeg')
+        background: url('../../assets/aboutme/bg.jpg')
         background-position: center
         background-size: cover
       @media screen and (min-width: 760px)

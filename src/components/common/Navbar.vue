@@ -9,17 +9,8 @@
 
       <div v-bind:class="[ isOpen ? 'open' : 'close', 'nav-menu']">
         <ul>
-          <template v-if="$route.fullPath == '/'">
             <li> <a href="#" v-scroll-to="'#aboutme'" title='About Me' v-on:click="openMenu()">About</a></li>
             <li> <a href="#" v-scroll-to="'#portfolio'" title='My Portfolio' v-on:click="openMenu()">Portfolio</a></li>
-            <li><router-link to="/blogs">Blog</router-link></li>
-          </template>
-
-          <template v-if="$route.fullPath == '/blogs' || $route.fullPath == '/blog/login'">
-            <li><router-link to="/">Back To Home</router-link></li>
-            <li><router-link to="/blogs/login">Login</router-link></li>
-          </template>
-
         </ul>
       </div>
       </div>
@@ -54,7 +45,7 @@ export default {
     top: 100%
     opacity: 0
     transition: all 0.2s ease-in-out
-    @media screen and (min-width: 760px)
+    @media screen and (min-width: 1024px)
       opacity: 1
   .spacer
     height: 81px

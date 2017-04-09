@@ -1,7 +1,7 @@
 <template lang="html">
     <section class='portfolio'>
 
-    <div class="container clearfix">
+    <div class="container">
       <h1>Here are some of the things I made</h1>
       <template v-for="project of projects">
       <div class="project">
@@ -97,7 +97,7 @@ export default {
       height: 100%
       z-index: -1
       opacity: 0.6
-      background: url('https://images.pexels.com/photos/239886/pexels-photo-239886.jpeg')
+      background: url('../../assets/portfolio/bg.jpg')
       background-position: center
       background-size: cover
     @media screen and (min-width: 760px)
@@ -164,6 +164,6 @@ export default {
           box-shadow: 0px 0px 40px 0 #000
         @media screen and (min-width: 700px)
           margin-left: 30px
-          float: left
+          display: inline-block
 
 </style>
