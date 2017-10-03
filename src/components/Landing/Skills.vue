@@ -4,6 +4,22 @@
       <h1>What Can I do</h1>
       <div class="item">
         <div class="item-title bg-color-green">
+          <i class="fa fa-desktop" aria-hidden="true"></i>
+          <i class="fa fa-laptop" aria-hidden="true"></i>
+          <i class="fa fa-mobile" aria-hidden="true"></i>
+          <i class="fa fa-hdd-o" aria-hidden="true"></i>
+          <i class="fa fa-database" aria-hidden="true"></i>
+          <img src="../../assets/title-bg-skill-1.png" alt="web design skill">
+          <h3>IT Services</h3>
+        </div>
+        <div class="item-desc">
+          <p>I have experience in IT service field for more than 10 years.</p>
+          <p>From personal computer system tune up, to server disaster recovery, I do it all.</p>
+          <p></p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-title bg-color-green">
           <i class="fa fa-html5" aria-hidden="true"></i>
           <i class="fa fa-css3" aria-hidden="true"></i>
           <img src="../../assets/title-bg-skill-1.png" alt="web design skill">
@@ -66,8 +82,9 @@ export default {
     .container
       padding: 80px 0
       position: relative
+      overflow: hidden
       margin: 0 auto
-      max-width: 1024px
+      max-width: 960px
       &:after
         content: ' '
         position: absolute
@@ -80,7 +97,6 @@ export default {
         background: url('https://images.pexels.com/photos/273238/pexels-photo-273238.jpeg')
         background-position: center
         background-size: cover
-
       h1
         font-weight: bold
         font-size: 44px
@@ -130,9 +146,10 @@ export default {
             font-weight: bold
         @media screen and (min-width: 860px)
           float: left
-          margin-left: 20px
+          margin: 0px 20px
 
-
+          &:last-child
+            margin-right: 0px
 
 
 </style>

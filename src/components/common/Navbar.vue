@@ -11,6 +11,7 @@
         <ul>
             <li> <a href="#" v-scroll-to="'#aboutme'" title='About Me' v-on:click="openMenu()">About</a></li>
             <li> <a href="#" v-scroll-to="'#portfolio'" title='My Portfolio' v-on:click="openMenu()">Portfolio</a></li>
+            <li> <a href="#" v-scroll-to="'#contact'" title='Contact' v-on:click="openMenu()">Contact</a></li>
         </ul>
       </div>
       </div>

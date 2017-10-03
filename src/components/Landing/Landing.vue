@@ -3,6 +3,7 @@
 <Carousel></Carousel>
 <aboutme  id='aboutme'></aboutme>
 <portfolio id='portfolio'></portfolio>
+<contact id='contact'></contact>
 
 </content>
 </template>
@@ -11,6 +12,8 @@
 import Carousel from '@/components/Landing/Carousel'
 import Aboutme from '@/components/Landing/Aboutme'
 import Portfolio from '@/components/Landing/Portfolio'
+import Contact from '@/components/Landing/Contact'
+
 
 
 export default {
@@ -18,6 +21,7 @@ export default {
     Carousel,
     Aboutme,
     Portfolio,
+    Contact,
   }
 }
 </script>

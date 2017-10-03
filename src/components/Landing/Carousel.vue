@@ -30,7 +30,7 @@ export default {
   data(){
     return {
       test: [
-        {caption: 'I Love Nature', bg: 'https://images.pexels.com/photos/1826/wood-nature-sunny-forest.jpg'},
+        {caption: 'I Love Nature', bg: 'https://static.pexels.com/photos/345522/pexels-photo-345522.jpeg'},
         {caption: 'I Am A Cat Person', bg: 'https://images.pexels.com/photos/172/animal-pet-close-up-view-hairs.jpg'},
         {caption: 'I Am A Self Learner', bg: 'https://images.pexels.com/photos/85583/books-85583.jpeg'},
         {caption: 'I Love Coding', bg: 'https://images.pexels.com/photos/270557/pexels-photo-270557.jpeg'},

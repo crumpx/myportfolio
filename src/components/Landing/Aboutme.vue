@@ -3,8 +3,8 @@
     <div class="container" >
       <div class="inner clearfix" >
           <h1 >Hi, My name is Gang.</h1>
-            <p >
-            A Chinese web developer currently live in New York City.
+            <p>
+            An IT professional and web developer currently live in Orlando, Florida, the sunshine state.
             <br><br>
             In my free time, I like to look at beautiful stuff.
           </p>
@@ -17,6 +17,11 @@
           </div>
           <div class="skillset" >
             <h2>My Skillset</h2>
+            <h4>IT Service</h4>
+            <ul v-for="itservice of itservices">
+              <li>{{itservice}}</li>
+            </ul>
+            <h4>Web Development</h4>
             <ul v-for="skill of skills">
               <li>{{skill}}</li>
 
@@ -44,7 +49,9 @@ export default {
   },
   data() {
     return {
-      skills: ["HTML5","JavaScript","CSS3","Photoshop","PSD to HTML", "Vuejs","Nodejs",
+      itservices:["Computer Repair", "Smartphone Repair", "Home and Office Networking","Data Recovery",
+    "Disaster Recovery"],
+      skills: [,"HTML5","JavaScript","CSS3","Photoshop","PSD to HTML", "Vuejs","Nodejs",
               "Express.js","Front/Backend development"],
       toolbox: [
         "Atom",
@@ -86,12 +93,15 @@ export default {
       @media screen and (min-width: 1300px)
         width: 960px
         margin: 0 auto
-      h1, h2
+      h1, h2, h4
         font-weight: bold
         font-size: 44px
         padding: 10px 0
       h2
         font-size: 28px
+      h4
+        font-size: 22px
+        text-decoration: underline
       p
         font-size: 22px
         padding: 32px 0
@@ -111,6 +121,7 @@ export default {
         margin: 10px 0
         li
           line-height: 1.2
+          padding-left: 10px
         @media screen and (min-width: 600px)
           width: 50%
       .toolbox
@@ -119,5 +130,4 @@ export default {
       .skillset
         @media screen and (min-width: 600px)
           float: left
-
 </style>
