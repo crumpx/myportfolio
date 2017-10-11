@@ -3,7 +3,11 @@
 
     <div class="container">
       <h1>Here are some of the things I made</h1>
+      <div class="portfolio-container">
+
+
       <template v-for="project of projects">
+
       <div class="project">
         <div class="project-img">
           <img v-bind:src="project.pic" alt="">
@@ -24,8 +28,9 @@
           <a :href="project.source">Source Code</a>
         </div>
       </div>
-  </template>
 
+  </template>
+</div>
     </div>
 
   </section>
@@ -38,6 +43,19 @@ export default {
   data() {
     return {
       projects: [
+        {name: 'phonerepairfl.com',
+          pic: require('../../assets/portfolio/website-phonerepair.png'),
+          desc: 'A responsive landing website made for a computer and phone repair business in FL.',
+          skills: ['HTML', 'Sass', 'JavaScript', 'JQuery', "Vue", "Github Pages"],
+          demo: 'http://phonerepairfl.com/',
+        source: 'http://phonerepairfl.com/' },
+        {name: 'Casesolved.us',
+          pic: require('../../assets/portfolio/website-casesolved.png'),
+          desc: 'A responsive landing website made for a computer and phone repair business.',
+          skills: ['HTML', 'Sass', 'JavaScript', 'JQuery', "Jekyll Engine", "Github Pages"],
+          demo: 'http://casesolved.us/',
+        source: 'http://casesolved.us/' },
+
         {name: 'Pomodoro Clock',
           pic: require('../../assets/portfolio/pomodoro-clock.png'),
           desc: 'Applying Pomodoro technique will boost your efficiency at work.',
@@ -66,14 +84,9 @@ export default {
           pic: require('../../assets/portfolio/simple-poll.png'),
           desc: 'It lets you create poll and you can share it to everyone else.',
           skills: ['HTML', 'Sass', 'Vue.js', 'Node.js', "Express.js", "MongoDB"],
-          demo: 'https://crumpx.github.io/jscalculator/',
-        source: 'https://github.com/crumpx/jscalculator/' },
-        {name: 'Casesolved.us',
-          pic: require('../../assets/portfolio/website-casesolved.png'),
-          desc: 'A responsive landing website made for a computer and phone repair business.',
-          skills: ['HTML', 'Sass', 'JavaScript', 'JQuery', "Jekyll Engine", "Github Pages"],
-          demo: 'http://casesolved.us/',
-        source: 'http://casesolved.us/' },
+          demo: 'https://crumpx.github.io/fccnewvote/',
+        source: 'https://github.com/crumpx/fccnewvote/' },
+
 
       ],
 
@@ -85,9 +98,15 @@ export default {
 <style lang="sass" scoped>
 
   .portfolio
+    padding: 40px 20px
     position: relative
     overflow: hidden
     background: rgba(0,54,102, 0.5)
+    h1
+      font-weight: bold
+      font-size: 44px
+      padding: 0 0 44px 0
+      color: #fff
     &:after
       content: ' '
       position: absolute
@@ -100,70 +119,64 @@ export default {
       background: url('../../assets/portfolio/bg.jpg')
       background-position: center
       background-size: cover
-    @media screen and (min-width: 760px)
-      padding: 40px
-
     .container
-      padding: 30px 20px
-      position: relative
-      overflow: hidden
       max-width: 960px
       margin: 0 auto
-      @media screen and (min-width: 760px)
-        padding: 40px 0
-      h1
-        font-weight: bold
-        font-size: 44px
-        padding: 0 0 40px 0
-        color: #fff
+      .portfolio-container
+        display: flex
+        flex-wrap: wrap
+        align-items: start
+        justify-content: space-around
+        .project
+          // margin: 20px 20px
+          margin-bottom: 30px
+          background: #fff
+          transition: 0.4s
+          padding-bottom: 20px
+          border-radius: 6px
+          box-shadow: 0 0 6px 0 #000
+          display: flex
+          flex-direction: column
+          width: 280px
 
-      .project
-        margin: 0 auto
-        margin-bottom: 30px
-        background: #fff
-        transition: 0.4s
-        padding-bottom: 20px
-        border-radius: 4px
-        box-shadow: 0 0 6px 0 #000
-        width: 280px
-        .project-img
-          height: 160px
-          overflow: hidden
-          border-radius: 5px 5px 0 0
-          img
-            width: 279px
-            border-bottom: 1px solid black
-        .project-desc
-          h3, p
-            font-size: 25px
-            margin: 20px
-          h3
-            font-weight: 800
-            text-align: center
-            line-height: 120%
-          p
-            font-size: 16px
-        .project-uses
-          ul
-            margin: 20px
-            li
-              margin-bottom: 12px
-              padding-bottom: 5px
-              border-bottom: 1px solid #ccc
-        .project-links
-          margin: 0 20px
-          a
-            cursor: pointer
-            font-size: 80%
-            text-decoration: none
-            padding-right: 20px
-            color: #333
-            &:hover
-              color: #bbf
-        &:hover
-          box-shadow: 0px 0px 40px 0 #000
-        @media screen and (min-width: 700px)
-          margin-left: 30px
-          display: inline-block
+          .project-img
+            margin: 0 auto
+            height: 160px
+            overflow: hidden
+            border-radius: 5px 5px 0 0
+            img
+              text-align: center
+              width: 260px
+              border-bottom: 1px solid black
+          .project-desc
+            h3, p
+              font-size: 25px
+              margin: 20px
+            h3
+              font-weight: 800
+              text-align: center
+              line-height: 120%
+            p
+              font-size: 1.2em
+          .project-uses
+            ul
+              margin: 20px
+              li
+                margin-bottom: 12px
+                padding-bottom: 5px
+                border-bottom: 1px solid #ccc
+          .project-links
+            margin: 0 20px
+            a
+              cursor: pointer
+              font-size: 80%
+              text-decoration: none
+              padding-right: 20px
+              color: #333
+              &:hover
+                color: #bbf
+          &:hover
+            box-shadow: 0px 0px 40px 0 #000
+
 
 </style>

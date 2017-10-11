@@ -1,9 +1,9 @@
 <template lang="html">
   <section class="my-skills ">
-    <div class="container clearfix">
-      <h1>What Can I do</h1>
+    <h1>What Can I do</h1>
+    <div class="container">
       <div class="item">
-        <div class="item-title bg-color-green">
+        <div class="item-title bg-color-blue">
           <i class="fa fa-desktop" aria-hidden="true"></i>
           <i class="fa fa-laptop" aria-hidden="true"></i>
           <i class="fa fa-mobile" aria-hidden="true"></i>
@@ -55,8 +55,7 @@
           </p>
         </div>
       </div>
-    </div>
-
+</div>
   </section>
 </template>
 
@@ -68,47 +67,34 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .left
-    float: left
 
   .bg-color-green
     background: rgba(0,214,90,0.6)
+  .bg-color-blue
+    background: rgba(48,94,153,0.6)
   .bg-color-purple
     background: rgba(197,112,219, 0.6)
   .bg-color-orange
     background: rgba(252,74,26, 0.6)
 
   .my-skills
+    padding: 40px 0
+    position: relative
+    overflow: hidden
+    margin: 0 auto
+    max-width: 960px
+    h1
+      font-weight: bold
+      font-size: 44px
+      color: #fff
     .container
-      padding: 80px 0
-      position: relative
-      overflow: hidden
-      margin: 0 auto
+      display: flex
+      flex-wrap: wrap
       max-width: 960px
-      &:after
-        content: ' '
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        z-index: -1
-        opacity: 0.6
-        background: url('https://images.pexels.com/photos/273238/pexels-photo-273238.jpeg')
-        background-position: center
-        background-size: cover
-      h1
-        font-weight: bold
-        font-size: 44px
-        padding: 0 0 40px 0
-        color: #fff
-
       .item
-        box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5)
-        border-radius: 4px
+        border-radius: 5px
         width: 240px
-        margin: 0 auto
-        margin-bottom: 40px
+        margin: 20px 20px
         p
           margin: 10px 0
           line-height: 20px
@@ -133,7 +119,6 @@ export default {
             left: 0
             width: 100%
             height: 100%
-            opacity: 1
             z-index: -1
           i
             color: #fff
@@ -145,11 +130,6 @@ export default {
             margin-bottom: 10px
             font-weight: bold
         @media screen and (min-width: 860px)
-          float: left
-          margin: 0px 20px
-
-          &:last-child
-            margin-right: 0px
-
+          margin: 20px 20px
 
 </style>

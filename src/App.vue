@@ -70,17 +70,6 @@ table {
 	border-spacing: 0;
 }
 
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
 
 .spacer{
   height: 100px
