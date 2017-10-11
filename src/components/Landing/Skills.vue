@@ -80,7 +80,6 @@ export default {
   .my-skills
     padding: 40px 0
     position: relative
-    overflow: hidden
     margin: 0 auto
     max-width: 960px
     h1
@@ -88,9 +87,10 @@ export default {
       font-size: 44px
       color: #fff
     .container
+      width: 100%
       display: flex
       flex-wrap: wrap
-      max-width: 960px
+      justify-content: space-around
       .item
         border-radius: 5px
         width: 240px
