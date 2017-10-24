@@ -13,7 +13,7 @@
             <li> <a href="#" v-scroll-to="'#portfolio'" title='My Portfolio' v-on:click="openMenu()">Portfolio</a></li>
             <li> <a href="#" v-scroll-to="'#contact'" title='Contact' v-on:click="openMenu()">Contact</a></li>
             <hr>
-            <li><a href="/static/Gang_Zhao_resume.pdf" title='resume'>Download Resume</a></li>
+            <li><a class="resume" href="/static/Gang_Zhao_resume.pdf"  target="_blank" title='resume'>Download Resume</a></li>
         </ul>
       </div>
       </div>
@@ -92,6 +92,12 @@ export default {
         top: 81px
         background: rgba(255,255,255, 0.8)
         border-bottom: 1px solid black
+        @media screen and (min-width: 790px)
+          .resume
+            border-radius: 6px
+            background: rgba(0,191,168,0.5)
+            &:hover
+              background: rgba(0,191,168,1)
         @media screen and (min-width: 790px)
           background: initial
           position: static

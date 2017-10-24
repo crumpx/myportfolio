@@ -12,6 +12,7 @@
             <a href="https://github.com/crumpx"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
             <a href="https://www.freecodecamp.com/crumpx"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/gang-zhao-198201"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class='resume' href="/static/Gang_Zhao_resume.pdf" target="_blank">Resume</i></a>
 
           </div>
           <div class="skillset-container">
@@ -129,6 +130,14 @@ export default {
         i
           font-size: 120%
           padding-right: 12px
+        .resume
+          padding: 5px 18px
+          // border: 1px white solid
+          border-radius: 6px
+          background: rgba(0,191,168,0.5)
+          &:hover
+            background: rgba(0,191,168,1)
+
       .skillset-container
         display: flex
         justify-content: space-between
