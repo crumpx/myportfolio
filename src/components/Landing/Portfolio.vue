@@ -127,6 +127,9 @@ export default {
         flex-wrap: wrap
         align-items: start
         justify-content: space-around
+        align-content: flex-start
+
+
         .project
           // margin: 20px 20px
           margin-bottom: 30px
@@ -138,6 +141,7 @@ export default {
           display: flex
           flex-direction: column
           width: 280px
+          align-self: flex-start
 
           .project-img
             margin: 0 auto

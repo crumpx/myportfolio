@@ -90,7 +90,10 @@ export default {
       width: 100%
       display: flex
       flex-wrap: wrap
-      justify-content: space-around
+      justify-content: space-between
+      &::after
+        content: ''
+        flex: 0 1 240px
       .item
         border-radius: 5px
         width: 240px

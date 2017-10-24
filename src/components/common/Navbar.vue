@@ -12,6 +12,8 @@
             <li> <a href="#" v-scroll-to="'#aboutme'" title='About Me' v-on:click="openMenu()">About</a></li>
             <li> <a href="#" v-scroll-to="'#portfolio'" title='My Portfolio' v-on:click="openMenu()">Portfolio</a></li>
             <li> <a href="#" v-scroll-to="'#contact'" title='Contact' v-on:click="openMenu()">Contact</a></li>
+            <hr>
+            <li><a href="/static/Gang_Zhao_resume.pdf" title='resume'>Download Resume</a></li>
         </ul>
       </div>
       </div>
@@ -21,12 +23,14 @@
 </template>
 
 <script>
+
 export default {
   name: 'navbar',
 
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+
     }
   },
   methods: {
@@ -77,6 +81,11 @@ export default {
         @media screen and (min-width: 790px)
           display: none
       .nav-menu
+        hr
+          padding: 0
+          margin: 0
+          @media screen and (min-width: 790px)
+            display: none
         width: 100%
         float: right
         position: absolute
