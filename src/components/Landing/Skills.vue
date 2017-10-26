@@ -4,26 +4,23 @@
     <div class="container">
       <div class="item">
         <div class="item-title bg-color-blue">
-          <i class="fa fa-desktop" aria-hidden="true"></i>
-          <i class="fa fa-laptop" aria-hidden="true"></i>
-          <i class="fa fa-mobile" aria-hidden="true"></i>
-          <i class="fa fa-hdd-o" aria-hidden="true"></i>
-          <i class="fa fa-database" aria-hidden="true"></i>
-          <img src="../../assets/title-bg-skill-1.png" alt="web design skill">
-          <h3>IT Services</h3>
+          <icon name='desktop' scale="1.5" class="icons"></icon>
+          <icon name='laptop' scale="1.5" class="icons"></icon>
+          <icon name='mobile' scale="1.5" class="icons"></icon>
+          <icon name='hdd-o' scale="1.5" class="icons"></icon>
+          <icon name='database' scale="1.5" class="icons"></icon>
+          <h1>IT Services</h1>
         </div>
         <div class="item-desc">
           <p>I have experience in IT service field for more than 10 years.</p>
           <p>From personal computer system tune up, to server disaster recovery, I do it all.</p>
-          <p></p>
         </div>
       </div>
       <div class="item">
         <div class="item-title bg-color-green">
-          <i class="fa fa-html5" aria-hidden="true"></i>
-          <i class="fa fa-css3" aria-hidden="true"></i>
-          <img src="../../assets/title-bg-skill-1.png" alt="web design skill">
-          <h3>Web Design</h3>
+          <icon name='html5' scale="1.5" class="icons"></icon>
+          <icon name='css3' scale="1.5" class="icons"></icon>
+          <h1>Web Design</h1>
         </div>
         <div class="item-desc">
           <p>Creating Responsive, modern, beautiful and content rich, SEO optimized website.</p><p>
@@ -32,9 +29,8 @@
       </div>
       <div class="item">
         <div class="item-title bg-color-purple">
-          <i class="fa fa-code" aria-hidden="true"></i>
-          <img src="../../assets/title-bg-skill-2.png" alt="web apps skill">
-          <h3>Web Apps</h3>
+          <icon name='code' scale="1.5" class="icons"></icon>
+          <h1>Web Apps</h1>
         </div>
         <div class="item-desc">
           <p>Reactive web application using the most advanced technologies.</p><p>I use Javascript, MongoDB, Vuejs and
@@ -44,9 +40,9 @@
       </div>
       <div class="item">
         <div class="item-title bg-color-orange">
-          <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-          <img src="../../assets/title-bg-skill-3.png" alt="seo skill">
-          <h3>Website SEO</h3>
+          <icon name='cart-arrow-down' scale="1.5" class="icons"></icon>
+
+          <h1>Website SEO</h1>
         </div>
         <div class="item-desc">
           <p>Search Engine Optimization is critical.</p><p>
@@ -60,13 +56,30 @@
 </template>
 
 <script>
+import 'vue-awesome/icons/desktop'
+import 'vue-awesome/icons/mobile'
+import 'vue-awesome/icons/laptop'
+import 'vue-awesome/icons/hdd-o'
+import 'vue-awesome/icons/database'
+import 'vue-awesome/icons/html5'
+import 'vue-awesome/icons/css3'
+import 'vue-awesome/icons/code'
+import 'vue-awesome/icons/cart-arrow-down'
+
+import Icon from 'vue-awesome/components/Icon'
 
 export default {
   name: 'skills',
+  components:{
+    Icon
+  }
 }
 </script>
 
 <style lang="sass" scoped>
+  .icons
+    color: white
+
 
   .bg-color-green
     background: rgba(0,214,90,0.6)
@@ -81,6 +94,9 @@ export default {
     padding: 40px 0
     position: relative
     margin: 0 auto
+    // display: flex
+    // flex-wrap: wrap
+
     max-width: 960px
     h1
       font-weight: bold
@@ -104,6 +120,7 @@ export default {
           &:first-letter
             font-weight: bold
             font-size: 150%
+
         .item-desc
           padding: 10px 20px 20px 20px
           background: #fff
@@ -127,7 +144,7 @@ export default {
             color: #fff
             font-size: 120%
             margin-bottom: 12px
-          h3
+          h1
             color: #fff
             font-size: 34px
             margin-bottom: 10px

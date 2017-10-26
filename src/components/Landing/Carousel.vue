@@ -6,9 +6,7 @@
             <slide>
               <div class="img-box" :style="{backgroundImage: 'url('+item.bg+')', backgroundSize: 'cover', backgroundPosition: 'center'}" >
                 <div class="caption"><h2 v-text="item.caption"></h2></div>
-                  <div class="scroll-down animated infinite bounce">
-                    <i class="arraw">⇓</i>
-                  </div>
+      
               </div>
             </slide>
           </template>

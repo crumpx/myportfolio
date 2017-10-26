@@ -8,10 +8,10 @@
             In my free time, I like to look at beautiful stuff.
           </p>
           <div class="social">
-            <a href="tencent://message/?uin=316155"><i class="fa fa-qq" aria-hidden="true"></i></a>
-            <a href="https://github.com/crumpx"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-            <a href="https://www.freecodecamp.com/crumpx"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/gang-zhao-198201"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="tencent://message/?uin=316155"><icon name='qq' scale="1.5" class="icons"></icon></a>
+            <a href="https://github.com/crumpx"><icon name='github-alt' scale="1.5" class="icons"></icon></a>
+            <a href="https://www.freecodecamp.com/crumpx"><icon name='free-code-camp' scale="1.5" class="icons"></icon></a>
+            <a href="https://www.linkedin.com/in/gang-zhao-198201"><icon name='linkedin' scale="1.5" class="icons"></icon></a>
             <a class='resume' href="/static/Gang_Zhao_resume.pdf" target="_blank">Resume</i></a>
 
           </div>
@@ -52,11 +52,17 @@
 </template>
 
 <script>
+import 'vue-awesome/icons/qq'
+import 'vue-awesome/icons/github-alt'
+import 'vue-awesome/icons/free-code-camp'
+import 'vue-awesome/icons/linkedin'
+
+import Icon from 'vue-awesome/components/Icon'
 import Skills from '@/components/Landing/Skills'
 export default {
   name: 'aboutme',
   components: {
-    Skills
+    Skills, Icon
   },
   data() {
     return {
@@ -121,10 +127,12 @@ export default {
         padding: 32px 0
         line-height: 1.0
       .social
+        display: flex
         padding-bottom: 20px
         a
           text-decoration: none
           color: #fff
+          margin-right: 10px
           &:first-child
             margin-right: 20px
         i
