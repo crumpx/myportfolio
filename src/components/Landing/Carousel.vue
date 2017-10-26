@@ -6,7 +6,7 @@
             <slide>
               <div class="img-box" :style="{backgroundImage: 'url('+item.bg+')', backgroundSize: 'cover', backgroundPosition: 'center'}" >
                 <div class="caption"><h2 v-text="item.caption"></h2></div>
-      
+
               </div>
             </slide>
           </template>
@@ -17,10 +17,10 @@
 
   <script>
   import { Carousel, Slide } from 'vue-carousel'
-  import forest from '../../assets/carosuel/forest.jpeg'
+  import forest from '../../assets/carosuel/forest.jpg'
   import cat from '../../assets/carosuel/cat.jpg'
-  import library from '../../assets/carosuel/library.jpeg'
-  import code from '../../assets/carosuel/code.jpeg'
+  import library from '../../assets/carosuel/library.jpg'
+  import code from '../../assets/carosuel/code.jpg'
   export default {
     name: 'mycarousel',
     components: {
