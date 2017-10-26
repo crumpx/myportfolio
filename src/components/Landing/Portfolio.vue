@@ -4,32 +4,21 @@
     <div class="container">
       <h1>Here are some of the things I made</h1>
       <div class="portfolio-container">
+        <template v-for="project of projects">
 
-
-      <template v-for="project of projects">
-
-      <div class="project">
-        <div class="project-img">
-          <img v-bind:src="project.pic" alt="">
+        <div class="project">
+            <img v-bind:src="project.pic" alt="">
+            <h1>{{project.name}}</h1>
+            <p>{{project.desc}}</p>
+            <ul>
+              <template v-for="skill of project.skills">
+              <li>{{skill}}</li>
+              </template>
+            </ul>
+            <a :href="project.demo">Demo</a>
+            <a :href="project.source">Source Code</a>
         </div>
-        <div class="project-desc">
-          <h3>{{project.name}}</h3>
-          <p>{{project.desc}}</p>
-          </div>
-        <div class="project-uses">
-          <ul>
-            <template v-for="skill of project.skills">
-            <li>{{skill}}</li>
-            </template>
-          </ul>
-        </div>
-        <div class="project-links">
-          <a :href="project.demo">Demo</a>
-          <a :href="project.source">Source Code</a>
-        </div>
-      </div>
-
-  </template>
+      </template>
 </div>
     </div>
 
@@ -128,10 +117,9 @@ export default {
         align-items: start
         justify-content: space-around
         align-content: flex-start
-
-
         .project
-          // margin: 20px 20px
+          &:hover
+            box-shadow: 0px 0px 40px 0 #000
           margin-bottom: 30px
           background: #fff
           transition: 0.4s
@@ -142,45 +130,36 @@ export default {
           flex-direction: column
           width: 280px
           align-self: flex-start
-
-          .project-img
-            margin: 0 auto
-            height: 160px
-            overflow: hidden
+          img
+            height: 180px
             border-radius: 5px 5px 0 0
-            img
-              text-align: center
-              width: 260px
-              border-bottom: 1px solid black
-          .project-desc
-            h3, p
-              font-size: 25px
-              margin: 20px
-            h3
-              font-weight: 800
-              text-align: center
-              line-height: 120%
-            p
-              font-size: 1.2em
-          .project-uses
-            ul
-              margin: 20px
-              li
-                margin-bottom: 12px
-                padding-bottom: 5px
-                border-bottom: 1px solid #ccc
-          .project-links
+            width: 280px
+            border-bottom: 1px solid black
+          h1, p
+            font-size: 25px
+            margin: 20px
+            color: black
+          h1
+            font-weight: 800
+            text-align: center
+            line-height: 120%
+            padding: 0
+          p
+            font-size: 1.2em
+          ul
+            margin: 20px
+            li
+              margin-bottom: 12px
+              padding-bottom: 5px
+              border-bottom: 1px solid #ccc
+          a
             margin: 0 20px
-            a
-              cursor: pointer
-              font-size: 80%
-              text-decoration: none
-              padding-right: 20px
-              color: #333
-              &:hover
-                color: #bbf
-          &:hover
-            box-shadow: 0px 0px 40px 0 #000
+            font-size: 80%
+            text-decoration: none
+            color: #333
+            &:hover
+              color: #bbf
+
 
 
 </style>

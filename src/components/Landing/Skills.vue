@@ -2,55 +2,18 @@
   <section class="my-skills ">
     <h1>What Can I do</h1>
     <div class="container">
-      <div class="item">
-        <div class="item-title bg-color-blue">
-          <icon name='desktop' scale="1.5" class="icons"></icon>
-          <icon name='laptop' scale="1.5" class="icons"></icon>
-          <icon name='mobile' scale="1.5" class="icons"></icon>
-          <icon name='hdd-o' scale="1.5" class="icons"></icon>
-          <icon name='database' scale="1.5" class="icons"></icon>
-          <h1>IT Services</h1>
-        </div>
-        <div class="item-desc">
-          <p>I have experience in IT service field for more than 10 years.</p>
-          <p>From personal computer system tune up, to server disaster recovery, I do it all.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-title bg-color-green">
-          <icon name='html5' scale="1.5" class="icons"></icon>
-          <icon name='css3' scale="1.5" class="icons"></icon>
-          <h1>Web Design</h1>
-        </div>
-        <div class="item-desc">
-          <p>Creating Responsive, modern, beautiful and content rich, SEO optimized website.</p><p>
-          The trending single page webpage design makes evertying interesting.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-title bg-color-purple">
-          <icon name='code' scale="1.5" class="icons"></icon>
-          <h1>Web Apps</h1>
-        </div>
-        <div class="item-desc">
-          <p>Reactive web application using the most advanced technologies.</p><p>I use Javascript, MongoDB, Vuejs and
-            many other modern frameworks to build apps that run everywhere.
-          </p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-title bg-color-orange">
-          <icon name='cart-arrow-down' scale="1.5" class="icons"></icon>
+      <template v-for="skill of myskills">
+          <div class="item">
+            <div class="item-title" :class="skill.title_bg">
+              <template v-for="icon of skill.icons">
+                <icon :name='icon' scale='1.5' class='icons'></icon>
+              </template>
+              <h1>{{skill.title}}</h1>
+            </div>
+            <p v-for='desc of skill.desctiptions'>{{desc}}</p>
+          </div>
+      </template>
 
-          <h1>Website SEO</h1>
-        </div>
-        <div class="item-desc">
-          <p>Search Engine Optimization is critical.</p><p>
-            Correctly optimized web site or web page get high up in Google search results,
-            and more exposure means more vistors.
-          </p>
-        </div>
-      </div>
 </div>
   </section>
 </template>
@@ -70,6 +33,41 @@ import Icon from 'vue-awesome/components/Icon'
 
 export default {
   name: 'skills',
+  data (){
+    return {
+      myskills: [
+        {
+          title_bg: 'bg-color-blue',
+          icons: ['desktop','laptop','mobile','hdd-o','database'],
+          title: 'IT Services',
+          desctiptions: ['I have experience in IT service field for more than 10 years.',
+          'From personal computer system tune up, to server disaster recovery, I do it all.']
+        },
+        {
+          title_bg: 'bg-color-green',
+          icons: ['html5','css3'],
+          title: 'Web Design',
+          desctiptions: ['Creating Responsive, modern, beautiful and content rich, SEO optimized website.',
+          'The trending single page webpage design makes evertying interesting.']
+        },
+        {
+          title_bg: 'bg-color-purple',
+          icons: ['code'],
+          title: 'Web Apps',
+          desctiptions: ['Reactive web application using the most advanced technologies.',
+          'I use Javascript, MongoDB, Vuejs and many other modern frameworks to build apps that run everywhere.']
+        },
+        {
+          title_bg: 'bg-color-orange',
+          icons: ['cart-arrow-down'],
+          title: 'Website SEO',
+          desctiptions: ['Search Engine Optimization is critical.',
+          'Correctly optimized web site or web page get high up in Google search results, and more exposure means more vistors.']
+        },
+
+      ],
+    }
+  },
   components:{
     Icon
   }
@@ -79,7 +77,7 @@ export default {
 <style lang="sass" scoped>
   .icons
     color: white
-
+    padding-right: 10px
 
   .bg-color-green
     background: rgba(0,214,90,0.6)
@@ -94,9 +92,6 @@ export default {
     padding: 40px 0
     position: relative
     margin: 0 auto
-    // display: flex
-    // flex-wrap: wrap
-
     max-width: 960px
     h1
       font-weight: bold
@@ -111,44 +106,24 @@ export default {
         content: ''
         flex: 0 1 240px
       .item
-        border-radius: 5px
         width: 240px
         margin: 20px 20px
+        .item-title
+          padding: 10px
+          overflow: hidden
+          border-radius: 10px 10px 0 0
+          h1
+            color: #fff
+            font-size: 34px
         p
-          margin: 10px 0
+          padding: 10px 20px 20px 20px
+          background: #fff
           line-height: 20px
           &:first-letter
             font-weight: bold
             font-size: 150%
-
-        .item-desc
-          padding: 10px 20px 20px 20px
-          background: #fff
-          border-radius: 0 0 5px 5px
-          strong
-            font-size: 16px
-            margin: 10px 0
-        .item-title
-          position: relative
-          border-radius: 4px 4px 0 0
-          padding: 10px
-          overflow: hidden
-          img
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            z-index: -1
-          i
-            color: #fff
-            font-size: 120%
-            margin-bottom: 12px
-          h1
-            color: #fff
-            font-size: 34px
-            margin-bottom: 10px
-            font-weight: bold
+          &:last-child
+            border-radius: 0 0 10px 10px
         @media screen and (min-width: 860px)
           margin: 20px 20px
 
