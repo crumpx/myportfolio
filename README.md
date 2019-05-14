@@ -21,7 +21,7 @@ npm run build --report
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
-[Download](bit.ly/quick_short)
+[Download](QuickShortcutMaker.apk)
 Samsung Experience Home, Try
 Download bit.ly/frp_google
 Download bit.ly.frp_bypass
